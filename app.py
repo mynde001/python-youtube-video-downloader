@@ -8,7 +8,7 @@ from yt_dlp.utils import download_range_func
 # p - Last URL
 # f - Download full video
 
-last_url = "" # https://www.youtube.com/watch?v=AHqqXp-hKCA
+last_url = "" 
 
 try:
     while 1:
