@@ -5,7 +5,10 @@ from yt_dlp.utils import download_range_func
 # Commands
 # q - Quit
 # r - Reset
+# p - Last URL
 # f - Download full video
+
+last_url = "" # https://www.youtube.com/watch?v=AHqqXp-hKCA
 
 try:
     while 1:
@@ -13,6 +16,14 @@ try:
 
         if yt_url == "q":
             break
+
+        if yt_url == "p" and last_url != "":
+            yt_url = last_url
+        elif yt_url == "p" and last_url == "":
+            print("No known last URL")
+            continue
+
+        last_url = yt_url
 
         video_starts = input("Video starts at (0:0:0): ")
 
