@@ -8,10 +8,10 @@ from yt_dlp.utils import download_range_func
 # p - Last URL
 # f - Download full video
 
-last_url = "" 
+last_url = ""
 
-try:
-    while 1:
+while 1:
+    try:
         yt_url = input("Enter a YouTube video URL: ")
 
         if yt_url == "q":
@@ -88,5 +88,5 @@ try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download(yt_url)
 
-except Exception as e:
-    print(e)
+    except Exception as e:
+        print(e)
