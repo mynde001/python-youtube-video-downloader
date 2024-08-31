@@ -5,7 +5,7 @@ from yt_dlp.utils import download_range_func
 # Commands
 # q - Quit
 # r - Reset
-# f - Download full video. Type into video_starts/video_ends input
+# f - Download full video
 
 try:
     while 1:
